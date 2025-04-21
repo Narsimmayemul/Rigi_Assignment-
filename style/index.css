@@ -1,0 +1,269 @@
+/* style.css */
+
+/* ========== RESET ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  img {
+    width: 100%;
+    display: block;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  h1 span.highlight,
+  h2 span.highlight {
+    color: #ff7a5a;
+  }
+  
+  /* ========== HERO ========== */
+  .hero {
+    position: relative;
+    background: url('../Assets/Imgs/bg.webp') no-repeat center center/cover;
+    height: 100vh;
+  }
+  
+  .hero-overlay {
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1)); */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .hero-image {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    width: 120px;
+    margin-bottom: 1rem;
+  }
+  
+  .btn.download {
+    background: linear-gradient(to right, #ff7a5a, #ff527b);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  
+  /* ========== SEAMLESS SECTION ========== */
+
+  .seamless {
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 1rem;
+    z-index: 1;
+    color: white;
+  }
+  
+  .blur-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../Assets/Imgs/blurImg.webp') no-repeat center center/cover;
+    filter: blur(10px);
+    z-index: -1;
+  }
+  
+  /* Ensures the content is on top and unaffected by the blur */
+  .seamless h2,
+  .seamless #card-container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .content-img {
+    width: 80%;
+    /* max-width: 600px; */
+    margin: 0 auto;
+    display: block;
+  }
+  
+  #card-container {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+  }
+
+  .seamless {
+    padding: 2rem 1rem;
+    /* background: #111; */
+  }
+   
+  .card {
+    flex: 0 0 auto;
+    width: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  /* ========== FEATURES SECTION ========== */
+  .features {
+    padding: 2rem 1rem;
+    background: #000;
+    text-align: center;
+  }
+  
+  .feature-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .feature {
+    background: #1a1a1a;
+    padding: 1rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 150px;
+  }
+  
+  /* ========== TESTIMONIALS ========== */
+  .testimonials {
+    padding: 2rem 1rem;
+    background: #111;
+    text-align: center;
+  }
+  
+  .testimonial-slider {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .testimonial {
+    background: #1a1a1a;
+    padding: 1rem;
+    border-radius: 15px;
+    text-align: left;
+  }
+  
+  .testimonial .user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .testimonial .user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* ========== CTA ========== */
+  .cta {
+    padding: 2rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    background: linear-gradient(to right, #eb7819 0%, #f5277a 100%);
+    color: #fff;
+  }
+  
+  .cta .btn.download {
+    background: #fff;
+    color: #ff527b;
+  }
+  
+  /* ========== FOOTER ========== */
+  footer {
+    background: #eae8e8;
+    color: #121111;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+    /* display: flex; */
+  }
+
+  .footer-logo {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  footer .footer-logo img {
+    width: 60%;
+    margin: 0 auto 1rem;
+  }
+  
+  footer .footer-links {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-transform:none;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  footer .btn.playstore img {
+    width: 120px;
+    margin-top: 0.5rem;
+  }
+  
+  /* ========== RESPONSIVE ========== */
+  @media (min-width: 768px) {
+    .hero-overlay {
+      align-items: center;
+    }
+  
+    .card-container {
+      justify-content: center;
+    }
+  
+    .testimonial-slider {
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    .testimonial {
+      max-width: 300px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .hero {
+      height: 90vh;
+    }
+  
+    .feature-icons {
+      gap: 2rem;
+    }
+  }
+  
