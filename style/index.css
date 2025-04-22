@@ -179,11 +179,13 @@ h2 span.highlight {
 .testimonials {
   padding: 2rem 1rem;
   background: #111;
+  width: 100%;  
   text-align: center;
 }
 
 .testimonial-slider {
   display: flex;
+  width: 100%;
   flex-direction: column;
   gap: 1.5rem;
 }
@@ -270,12 +272,30 @@ footer .btn.playstore img {
   .btnID {
     width: 200px !important;
     font-size: 18px !important;
+    justify-self: center;
   }
   .hero-text {
     padding: 5px !important;
   }
   .logo {
     width: 150px !important;
+  }
+  .footer-logo {
+    flex-direction: column;
+  }
+  .download-app {
+    margin-top: 20px;
+  }
+  .hero-image {
+    width: 80% !important;
+  }
+  .hero-overlay {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-overlay button {
+    align-self: center;
   }
 }
 
